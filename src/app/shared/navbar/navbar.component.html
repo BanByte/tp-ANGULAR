@@ -1,14 +1,16 @@
 <mat-toolbar color="primary">
-    <mat-toolbar-raw>
+    <mat-toolbar-row>
         <span>TP-Blog</span>
         <span class="spacer"> </span>
         <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
             <span>Bonjour {{user.displayName}}!</span>
             <button mat-button (click)="auth.logout()">Deconnexion</button>
         </div>
+         
         <ng-template #showLogin>
             <button mat-button (click)="auth.login()">Connexion avec Google</button>
         </ng-template>
 
-    </mat-toolbar-raw>
+
+    </mat-toolbar-row>
 </mat-toolbar>
