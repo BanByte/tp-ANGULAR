@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+
+$tpBlog-app-primary: mat-palette($mat-blue-grey,900);
+$tpBlog-app-accent: mat-palette($mat-red,A200);
+
+$tpBlog-app-warn: mat-palette($mat-red);
+
+$tpBlog-app-theme: mat-light-theme($tpBlog-app-primary,$tpBlog-app-accent,$tpBlog-app-warn);
+
+@include angular-material-theme($tpBlog-app-theme);
