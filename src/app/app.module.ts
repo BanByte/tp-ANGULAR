@@ -12,6 +12,17 @@ import {AngularFireStorageModule} from 'angularfire2/storage';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {environment} from '../environments/environment';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { PostsModule } from './posts/posts.module';
+
+import {Routes,RouterModule} from '@angular/router';
+
+
+const routes: Routes = [
+
+  {path: '', redirectTo: '/blog',pathMatch: 'full'},
+  {path: '',loadChildren: './posts/posts.module#PostsModule'}
+
+]
 
 
 
@@ -29,6 +40,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     CoreModule,
     SharedModule,
+    PostsModule,
+    RouterModule.forRoot(routes)
     
     
   ],
