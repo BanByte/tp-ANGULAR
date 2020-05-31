@@ -14,7 +14,7 @@ import 'rxjs/add/operator/map';
 export class PostService {
   postsCollection: AngularFirestoreCollection<Post>
   constructor(private afs: AngularFirestore) {
-    this.postsCollection = this.afs.collection('Posts', ref => ref.orderBy('publishd','desc'));
+    this.postsCollection = this.afs.collection('posts', ref => ref.orderBy('published','desc'));
    }
 
    getPosts() {
