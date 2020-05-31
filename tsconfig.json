@@ -12,6 +12,10 @@
     
   ],
 
+  "strictPropertyInitialization": true,
+  
+  
+
 
 }
 
