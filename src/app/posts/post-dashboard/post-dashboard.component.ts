@@ -9,9 +9,9 @@ import {PostService} from '../post.service'
 })
 export class PostDashboardComponent implements OnInit {
 
-  title?: string
+  title!: string
   image?: string 
-  content?: string
+  content!: string
 
   constructor(private auth: AuthService, private postService: PostService) { }
 

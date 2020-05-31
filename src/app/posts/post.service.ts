@@ -35,6 +35,7 @@ export class PostService {
     this.postDoc = this.afs.doc<Post>(`posts/${id}`);
     return this.postDoc.valueChanges()
   }
+  
   create(data: Post) {
     this.postsCollection.add(data)
   }
